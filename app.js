@@ -122,11 +122,11 @@ function cuentas(total, personas, porcentaje){
 
     por = porcentaje/100;
 
-    propinaPorPersona = total*por/personas;
+    propinaPorPersona = (total*por/personas);
     //propinaPorPersona = Math.round(propinaPorPersona, -2);
-    document.querySelector(".tipPerPerson").innerHTML = `$${propinaPorPersona}`;
+    document.querySelector(".tipPerPerson").innerHTML = `$${propinaPorPersona.toFixed(2)}`;
 
-    totalPorPersona = total/personas + propinaPorPersona;
+    totalPorPersona = (total/personas + propinaPorPersona).toFixed(2);
     //totalPorPersona = Math.round(totalPorPersona, -2);
     document.querySelector(".totalPerPerson").innerHTML = `$${totalPorPersona}`;
 

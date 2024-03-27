@@ -11,7 +11,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
     min-width: 375px;
     font-size: 24px;
     padding: 20px 0;
@@ -26,42 +27,54 @@ body{
     align-items: center;
     justify-items: center;
     border-radius: 5px;
-    max-width: 975px;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
     height: 100%;
 }
 
 .box1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
-    padding: 0 30px;
+    /*padding: 0 30px;*/
     height: 100%;
     
 }
 
 .lil-box{
     position: relative;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     width: 100%;
 }
 
-.lil-box input{
+.bill-item{
+    position: relative;
+}
+
+input{
     background-color:hsl(189, 41%, 97%);
     border: none;
-    padding: 8px 0;
+    padding: 8px 20px;
     border-radius: 5px;
     width: 100%;
     text-align: right;
     color: hsl(183, 100%, 15%);
 }
 
-.lil-box input:focus{
+input:focus{
     outline: none;
     border: 3px solid hsl(183, 100%, 15%);
 }
 
-.lil-box img{
+.bill-item img{
     position: absolute;
-    bottom: 7px;
+    top: 50%;
     left: 10px;
+    transform: translate(50% , -50%);
+    /*bottom: 7px;
+    left: 10px;*/
 }
 
 .idk{
@@ -125,7 +138,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .box2{
     width: 100%;
-    padding: 0px 30px;
+    /*padding: 0px 30px;*/
     height: 100%;
 }
 
@@ -137,9 +150,11 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
+    /*justify-content: center;*/
+    /*gap: 100px;*/
     height: 100%;
+    min-height: 380px;
 }
 
 .idk2{
@@ -153,10 +168,10 @@ input[type=number]::-webkit-inner-spin-button {
     
 }
 
-.people{
+/*.people{
     outline: none;
     height: 100%;
-}
+}*/
 
 .tipPerPerson, .totalPerPerson{
     color: hsl(172, 67%, 45%);
@@ -183,13 +198,17 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: hsl(185, 41%, 84%);
 }
 
+#custom{
+    text-align: center;
+}
+
 @media (min-width: 750px) {
     .container{
         flex-direction: row;
     }
 
     .box2{
-        height: 300px;
+        /*height: 300px;*/
     }
 
     .idk{
